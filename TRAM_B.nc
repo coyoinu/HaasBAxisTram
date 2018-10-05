@@ -1,0 +1,18 @@
+%
+O09817 (Haas NGC B Axis tram)
+T19 M06 (Tool 19 is calibrated probe)
+G43 G55 H19 Z2. (Set G55 approx 1" above table w/ slots aligned to X)
+G65 P9832 (spin probe on)
+G00 B0 (Make sure B is at 0*)
+G65 P9810 X0 Y0 Z1. F75. (safe move to 1" above G55)
+G65 P9817 X10. Z-2. (probe across 10" in X, 2" of Z travel)
+G65 P9810 Z1.  (safe move back up)
+G65 P9833  (probe spin off)
+G28 Z10. (retract 10")
+M00 (stop)
+G00 B#10189 (move B axis by amount probe found in macro var 10189)
+(Go to Settings -> Rotary)
+(set B axis tool change offset)
+(Then Zero return, single, B)
+(run again to check)
+%
